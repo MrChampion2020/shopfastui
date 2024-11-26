@@ -1,0 +1,72 @@
+body {
+  font-family: "Josefin Sans";
+  background-color: #eef1ff;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.category-image {
+  transition: all ease 0.3s;
+}
+
+.category-image:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.primaryColor {
+  color: #424874;
+}
+#primaryBgColor {
+  background-color: #424874;
+}
+#primaryBgColor:disabled {
+  background-color: #6e74a9;
+  color: white;
+}
+#primaryBgColor:hover {
+  background-color: #a6b1e1;
+  color: #424874;
+}
+.storeName:hover {
+  cursor: pointer;
+}
+
+.link {
+  color: #424874;
+
+  text-decoration: none;
+}
+
+.textOverflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.prodItem {
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  background-color: #f6f6f8;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.prodItem:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.prodDet {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 5px;
+}
