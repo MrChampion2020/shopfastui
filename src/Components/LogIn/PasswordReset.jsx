@@ -99,7 +99,7 @@ console.log(token, userId)
             marginBottom: 15,
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+          <Avatar sx={{ m: 1, bgcolor: "grey" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -150,8 +150,11 @@ console.log(token, userId)
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
               id="primaryBgColor"
-              disabled={password.newPass != password.confirmNewPass}
-            >
+              disabled={password.newPass !== password.confirmNewPass}
+            style={{
+              backgroundColor: "#0F52BA",
+              color: "white"
+            }}>
               Update
             </Button>
           </Box>

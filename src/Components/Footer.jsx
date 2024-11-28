@@ -98,7 +98,7 @@ const Footer = () => {
         </Stack>
       </Stack> */}
       {/* <Newsletter /> */}
-      <MyFooter />
+      {/* <MyFooter /> */}
     </Box>
   );
 };

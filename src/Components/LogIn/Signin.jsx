@@ -127,7 +127,7 @@ export default function SignIn() {
             marginBottom: 15,
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+          <Avatar sx={{ m: 1, bgcolor: "grey" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -197,7 +197,10 @@ export default function SignIn() {
               sx={{ mt: 3, mb: 2 }}
               id="primaryBgColor"
               disabled={!loginData.email || !loginData.password}
-            >
+           style={{
+            backgroundColor: "#0F52BA",
+            color: "white"
+           }} >
               {loading ? "Signing In..." : "Sign In"}
             </Button>
             <Grid container>

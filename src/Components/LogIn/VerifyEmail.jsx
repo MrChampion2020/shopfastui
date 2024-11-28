@@ -51,7 +51,11 @@ const VerifyEmail = () => {
           </Typography>
 
           <Link className="link" to="/signin">
-            <Button variant="contained" id="primaryBgColor">
+            <Button variant="contained" id="primaryBgColor"
+            style={{
+              backgroundColor: "#0F52BA",
+              color: "white"
+            }}>
               Go to login
             </Button>
           </Link>

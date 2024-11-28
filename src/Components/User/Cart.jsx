@@ -55,8 +55,16 @@ const Cart = () => {
             fullWidth
             size="large"
             variant="contained"
-            id="primaryBgColor"
+            // id="primaryBgColor"
             onClick={handleCheckout}
+            sx={{
+              backgroundColor: "#0F52BA",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                color: "#0F52BA",
+                backgroundColor: "white",
+              },
+            }}
           >
             Checkout
           </Button>

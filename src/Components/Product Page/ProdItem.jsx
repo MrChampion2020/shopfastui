@@ -16,7 +16,7 @@ const ProdItem = ({ item }) => {
         navigate(`/product/${_id}`);
       }}
       style={{
-        border: "0.05px solid green",
+        border: "0.05px solid #29CC29",
         objectFit: "cover",
         width: "100%"
       }}
