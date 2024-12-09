@@ -94,17 +94,30 @@ export default function CustomPaginationActionsTable() {
   const [loading, setLoading] = React.useState(false);
   React.useEffect(() => {
     setLoading(true);
+    // axios
+    //   .get(`${process.env.REACT_APP_SERVER_BASE_URL}/order/get-all`)
+    //   .then((res) => {
+    //     console.log("order", res.data);
+    //     setOrders(res.data);
+    //     setLoading(false);
+    //   })
+    //   .catch((e) => {
+    //     console.log(e.message);
+    //     setLoading(false);
+    //   });
+
     axios
-      .get(`${process.env.REACT_APP_SERVER_BASE_URL}/order/get-all`)
-      .then((res) => {
-        console.log("order", res.data);
-        setOrders(res.data);
-        setLoading(false);
-      })
-      .catch((e) => {
-        console.log(e.message);
-        setLoading(false);
-      });
+  .get(`${process.env.REACT_APP_SERVER_BASE_URL}/order/get-all`)
+  .then((res) => {
+    console.log("order", res.data);
+    setOrders(Array.isArray(res.data) ? res.data : []);
+    setLoading(false);
+  })
+  .catch((e) => {
+    console.log(e.message);
+    setLoading(false);
+  });
+
   }, []);
 
   // Avoid a layout jump when reaching the last page with empty rows.

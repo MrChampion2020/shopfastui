@@ -9,7 +9,7 @@ const ProdImage = ({ image }) => {
       justifyContent="center"
     >
       <img
-        style={{ width: "20rem", objectFit: "cover" }}
+        style={{ width: "100%", objectFit: "cover" }}
         height="100%"
         src={image}
       />

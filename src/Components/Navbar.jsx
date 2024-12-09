@@ -345,7 +345,8 @@ import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
+// import IconButton from "@mui/material/IconButton";
+import { IconButton, Avatar } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
@@ -688,7 +689,7 @@ export default function Navbar() {
 
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "flex", md: "flex" } }} gap={1}>
-            <IconButton
+            {/* <IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
@@ -715,7 +716,58 @@ export default function Navbar() {
               </Typography>
 
               <KeyboardArrowDownRoundedIcon />
-            </IconButton>
+            </IconButton> */}
+
+<IconButton
+      size="large"
+      edge="end"
+      aria-label="account of current user"
+      aria-controls={menuId}
+      aria-haspopup="true"
+      onClick={handleProfileMenuOpen}
+      color="inherit"
+      style={{
+        borderRadius: "10px",
+        width: "auto",
+        padding: "8px",
+        margin: "auto 10px",
+        backgroundColor: "white",
+      }}
+      sx={{
+        transition: "all 0.3s ease",
+        "&:hover": {
+          color: "grey",
+        },
+      }}
+    >
+      {isAuth && userDet ? (
+        // Logged-in user
+        <>
+          <Typography sx={{ fontWeight: "500", marginRight: "8px" }}>
+            Hi, {userDet.firstName}
+          </Typography>
+          <KeyboardArrowDownRoundedIcon />
+        </>
+      ) : (
+        // Guest user
+        <>
+          <Avatar
+            alt="Guest"
+            sx={{
+              width: 30,
+              height: 30,
+              marginRight: "8px",
+              backgroundColor: "grey",
+            }}
+          >
+            
+          </Avatar>
+          <Typography>Login</Typography>
+        </>
+      )}
+    </IconButton>
+
+
 
             <IconButton
               size="large"
@@ -732,7 +784,7 @@ export default function Navbar() {
             >
               <Badge
                 badgeContent={isAuth ? cartItems.length : 0}
-                color="secondary"
+                color="success"
               >
                 <ShoppingCartRoundedIcon />
               </Badge>

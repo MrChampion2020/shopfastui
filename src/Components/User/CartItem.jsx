@@ -69,7 +69,7 @@ const CartItem = ({ prod, qty }) => {
               navigate(`/product/${_id}`);
             }}
             style={{
-              fontSize: { xs: '26px' },
+              fontSize: {xs: "12px", xl: "14px" },
               cursor: 'pointer',
               color: 'black',
               fontWeight: '800',
@@ -106,7 +106,7 @@ const CartItem = ({ prod, qty }) => {
           >
             {' '}
             {
-              new Intl.NumberFormat('en-IN', {
+              new Intl.NumberFormat('en-US', {
                 style: 'currency',
                 currency: 'NGN',
               })

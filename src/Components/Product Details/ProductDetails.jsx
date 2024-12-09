@@ -95,16 +95,16 @@ const ProductDetails = ({ prod, exists }) => {
         </Box>
       </Box>
       <Stack direction="row">
-        <Typography fontSize={20} color="#424874" mr={2}>
+        <Typography fontSize={20} color="black" mr={2}>
           <b>Qty :</b>
         </Typography>
         <ButtonGroup size="small" aria-label="small button group">
           {buttons}
         </ButtonGroup>
       </Stack>
-      <Typography color="#424874" fontSize={{ xs: 20, sm: 30 }} variant="h6">
+      <Typography color="darkgreen" fontSize={{ xs: 20, sm: 30 }} variant="h6">
         Price :{" "}
-        {new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+        {new Intl.NumberFormat("en-US", { maximumSignificantDigits: 3 }).format(
           price
         )}{" "}
         NGN
@@ -116,8 +116,10 @@ const ProductDetails = ({ prod, exists }) => {
           disabled={!isAuth}
           variant="outlined"
           onClick={handleAddToCart}
+          fontSize={{ xs: "10px", sm: "14px" }}
+          width={{ xs: "40%", sm: "50%" }}
         >
-          {!exists ? "Add to Cart" : "Go to cart "}{" "}
+          {!exists ? " + " : " Open "}{" "}
           <span style={{ marginLeft: "5px" }}>
             <ShoppingCartRounded fontSize="small" />
           </span>
@@ -128,9 +130,13 @@ const ProductDetails = ({ prod, exists }) => {
           variant="contained"
           disabled={!isAuth}
           onClick={handleButtonClick}
+          fontSize={{ xs: "10px", sm: "14px" }}
+          width={{ xs: "40%", sm: "50%" }}
           style={{
             color: "white",
-            backgroundColor: "green"
+            backgroundColor: "green",
+            
+            
           }}
         >
           {isAuth ? "Buy Now" : "log in to continue"}

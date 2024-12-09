@@ -20,7 +20,7 @@ const CartDetails = ({ cartItems,total }) => {
           <p>Price ({cartItems.length} Items) : </p>
           <p>
             {" "}
-            {new Intl.NumberFormat("en-IN", {
+            {new Intl.NumberFormat("en-US", {
               style: "currency",
               currency: "NGN",
             }).format(total)}{" "}
@@ -31,7 +31,7 @@ const CartDetails = ({ cartItems,total }) => {
           <p style={{ color: "green" }}>
             -
             {/* {" "} */}
-            {new Intl.NumberFormat("en-IN", {
+            {new Intl.NumberFormat("en-US", {
               style: "currency",
               currency: "NGN",
             }).format}
@@ -48,7 +48,7 @@ const CartDetails = ({ cartItems,total }) => {
           <p>Secured Packaging Fee : </p>
           <p>
             {" "}
-            {new Intl.NumberFormat("en-IN", {
+            {new Intl.NumberFormat("en-US", {
               style: "currency",
               currency: "NGN",
             }).format(total * 0.0015)}{" "}
@@ -63,7 +63,7 @@ const CartDetails = ({ cartItems,total }) => {
           <h4>Total Amount: </h4>
           <h5>
             {
-              new Intl.NumberFormat("en-IN", {
+              new Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "NGN",
               })

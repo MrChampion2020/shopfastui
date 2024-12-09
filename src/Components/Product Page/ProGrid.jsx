@@ -63,9 +63,9 @@ import ProdItem from "./ProdItem";
 const ProGrid = ({ prod = [], setFilter, setSort, filter, sort }) => {
   return (
     <Box width="90%">
-      <Grid container spacing={{ xs: 2, sm: 3, md: 4 }} justifyContent="center">
+      <Grid container spacing={{ xs: 4, sm: 3, md: 4 }} justifyContent="center">
         {prod.map((product) => (
-          <Grid key={product._id} item xs={12} sm={6} md={4} lg={4}>
+          <Grid key={product._id} item xs={6} sm={4} md={3} lg={3}>
             <ProdItem item={product} />
           </Grid>
         ))}

@@ -25,7 +25,7 @@ const Cart = () => {
       spacing={2}
     >
       <Stack
-        width={{ xs: "100%", md: "120%", xl: "60%" }}
+        width={{ xs: "100%", md: "100%", xl: "60%" }}
         margin={{ xs: "none", xl: "0 30px" }}
         height="450px"
         overflow="scroll"

@@ -13,7 +13,7 @@ const Home = () => {
       <ImageSlider />
 
       <Featured 
-      style={{marginTop: "10px", marginBottom: "5px", width: "90%"}}/>
+      style={{marginTop: "10px", marginBottom: "5px", width: "100%"}}/>
       <AllPro 
       style={{
         margin: "auto"

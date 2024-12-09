@@ -8,7 +8,8 @@ const ProdItem = ({ item }) => {
   const navigate = useNavigate();
   return (
     <Box
-      height={{ xs: "300px", sm: "400px" }}
+      height={{ xs: "200px", sm: "300px" }}
+    
       width={{ xs: "100%", md: "100%" }}
       className="prodItem"
       p="6px"
@@ -26,13 +27,13 @@ const ProdItem = ({ item }) => {
       style={{
         borderRadius: "10px"
       }}/>
-      <Typography className="textOverflow" m="15px 5px" variant="h6" mb="5px" color="darkgreen">
+      <Typography className="textOverflow" m="15px 5px" fontSize={{xs: "14px", sm: "19px"}} mb={{xs: "2px", sm: "5px"}} color="darkgreen">
         {title}
       </Typography>
  
-      <Typography fontSize={19} m="0px 5px" className="link" color="black">
+      <Typography fontSize={{xs: "14px", sm: "19px"}} m="0px 5px" className="link" color="black">
         <b>NGN</b>{" "}
-        {new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+        {new Intl.NumberFormat("en-US", { maximumSignificantDigits: 3 }).format(
           price
         )}
       </Typography>
