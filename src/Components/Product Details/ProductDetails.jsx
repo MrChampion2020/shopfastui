@@ -112,12 +112,12 @@ const ProductDetails = ({ prod, exists }) => {
 
       <Stack direction="row" spacing={2}>
         <Button
-          size="large"
+          size="small"
           disabled={!isAuth}
           variant="outlined"
           onClick={handleAddToCart}
           fontSize={{ xs: "10px", sm: "14px" }}
-          width={{ xs: "40%", sm: "50%" }}
+          width={{ xs: "40%", sm: "40%" }}
         >
           {!exists ? " + " : " Open "}{" "}
           <span style={{ marginLeft: "5px" }}>
@@ -125,7 +125,7 @@ const ProductDetails = ({ prod, exists }) => {
           </span>
         </Button>
         <Button
-          size="large"
+          size="small"
           id="primaryBgColor"
           variant="contained"
           disabled={!isAuth}
