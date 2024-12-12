@@ -1,5 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import { Box } from "@mui/system";
+import { border, Box, color } from "@mui/system";
 import React from "react";
 import { setActiveProd } from "../Redux/activeProdSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,7 +15,8 @@ const ProdFilter = ({ sort, setSort }) => {
       display="flex"
       justifyContent="space-between"
     >
-      <Box width={{ xs: "35%", md: "20%" }}>
+      <Box width={{ xs: "35%", md: "20%"}}
+      >
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Filter By</InputLabel>
           <Select
@@ -37,6 +38,8 @@ const ProdFilter = ({ sort, setSort }) => {
           </Select>
         </FormControl>
       </Box>
+
+
       <Box width={{ xs: "35%", md: "20%" }}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Sort By</InputLabel>

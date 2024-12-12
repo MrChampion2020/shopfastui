@@ -50,7 +50,7 @@ const CartItem = ({ prod, qty }) => {
         onClick={() => {
           navigate(`/product/${_id}`);
         }}
-        style={{ width: '80%', margin: 'auto' }}
+        style={{ width: '95%', margin: 'auto' }}
       >
         <img
           src={image}

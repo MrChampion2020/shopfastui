@@ -108,7 +108,7 @@ export default function HomeTabs() {
     handleMenuClose(); // Close the dropdown
   };
 
-  let { pathname } = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <Box
@@ -125,20 +125,18 @@ export default function HomeTabs() {
       sx={{ width: "100%", bgcolor: "background.paper" }}
       padding={{ xs: "5px 0", sm: "10px 0" }}
     >
-      {/* 
-      
-      {/* <Button
+      <Button
         id="category-button"
         aria-controls={open ? "category-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleMenuOpen} // Open menu on click
-        sx={{ color: "#424874" }}
+        sx={{ color: "darkgreen", fontSize: "16px" }}
       >
         Categories
       </Button>
 
-      {Dropdown Menu }
+      {/* Dropdown Menu */}
       <Menu
         id="category-menu"
         anchorEl={anchorEl}
@@ -148,9 +146,8 @@ export default function HomeTabs() {
           "aria-labelledby": "category-button",
         }}
       >
-
         <MenuItem onClick={() => handleCategoryClick("all")}>
-         Browse All
+          Browse All
         </MenuItem>
         <MenuItem onClick={() => handleCategoryClick("electronics")}>
           Electronics
@@ -161,11 +158,10 @@ export default function HomeTabs() {
         <MenuItem onClick={() => handleCategoryClick("shirts")}>
           Shirts
         </MenuItem>
-        
         <MenuItem onClick={() => handleCategoryClick("cosmetics")}>
-          
+          Cosmetics
         </MenuItem>
-      </Menu> */}
+      </Menu>
     </Box>
   );
 }

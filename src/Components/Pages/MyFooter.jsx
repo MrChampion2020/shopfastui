@@ -10,7 +10,7 @@ const MyFooter = () => {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    padding: '40px 80px',
+    padding: '10px 20px',
   };
 
   const columnStyle = {
